@@ -21,8 +21,13 @@ public class CommonController {
         return "Get request called - Spring Security Legacy";
     }
 
-    @GetMapping("/user")
-    public String getUserRequest(){
-        return "User Get request called - Spring Security Legacy";
+    @GetMapping("/admin")
+    public String getAdminRequest(){
+        return "Administrator Get request called - Spring Security Legacy";
+    }
+
+    @GetMapping("/customer")
+    public String getCustomerRequest(){
+        return "Customer Get request called - Spring Security Legacy";
     }
 }
