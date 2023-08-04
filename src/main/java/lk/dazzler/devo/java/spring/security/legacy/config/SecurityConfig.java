@@ -17,16 +17,26 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception{
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         //using in memory authentication for now
-        auth.inMemoryAuthentication().
-                withUser("Dazzler").
-                password("dazzler7@Tec").
-                roles("Admin");
+        auth.inMemoryAuthentication()
+                .withUser("Dazzler")
+                .password("dazzler7@Tec")
+                .roles("Admin")
+                //we can add more roles (users) using the add() method
+                .and()
+                .withUser("Admin")
+                .password("dazzler7@Tec")
+                .roles("User1");
     }
 
+    /*
+    How to set a password encoder?
+    * Just expose a @Bean of type PasswordEncoder.
+     */
     @Bean
-    public PasswordEncoder getPasswordEncoder(){
+    public PasswordEncoder getPasswordEncoder() {
+        //NoOpPasswordEncoder is deprecated but
         return NoOpPasswordEncoder.getInstance();
     }
 
