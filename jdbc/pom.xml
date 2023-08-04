@@ -12,8 +12,8 @@
         <relativePath/>
     </parent>
 
-    <groupId>lk.dazzler.devo.java.spring.security.legacy</groupId>
-    <artifactId>Spring-Security-Legacy</artifactId>
+    <groupId>lk.dazzler.devo.java.spring.security</groupId>
+    <artifactId>jdbc</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -34,6 +34,13 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>6.0.9</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
